@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class MatrixTester7 {
+public class MatrixTester10 {
 	public static void main(String[] args) throws Exception {
 
 
@@ -83,21 +83,32 @@ public class MatrixTester7 {
 	     {
 	         for(int j=0; j<numeroDelArregloCol; j++)
 	         {
-	        	 if (j== i) {
 	        		 listaInteger.add( arregloreflector[i][j]);
-				}
 	         }
 	     }
 	     
 		    int [] arregloreflectores = new int [listaInteger.size()];
 		    int cantidad = 0;
+		    int cantidadCero = 0;
+		    int cantidadPo = 0;
+		    int cantidadNe = 0;
 		    for (Integer integer : listaInteger) {
+		    	if (integer==0) {
+		    		cantidadCero++;
+				}if (integer>0) {
+					cantidadPo++;
+				} else {
+					cantidadNe++;
+				}
 		    		 arregloreflectores[cantidad] = integer;
 		    		 cantidad++;
 
 			}
 	     
 		    System.out.println(Arrays.toString(arregloreflectores));
+		    System.out.print("Valor  igual cero : " + cantidadCero);
+		    System.out.print("Valor positivos: " +cantidadPo);
+		    System.out.print("Valor negativos : "+ cantidadNe);
 	}
 
 	private static boolean isNumeric(String cadena){

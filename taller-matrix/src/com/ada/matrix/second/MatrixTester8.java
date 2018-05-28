@@ -1,11 +1,10 @@
 package com.ada.matrix.second;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
-public class MatrixTester7 {
+public class MatrixTester8 {
+
+	
 	public static void main(String[] args) throws Exception {
 
 
@@ -77,27 +76,21 @@ public class MatrixTester7 {
 	         }
 	    }
 		
-		List<Integer> listaInteger = new ArrayList<>();
+		
 
 	     for(int i=0; i<numeroDelArreglo; i++)
 	     {
 	         for(int j=0; j<numeroDelArregloCol; j++)
 	         {
 	        	 if (j== i) {
-	        		 listaInteger.add( arregloreflector[i][j]);
+	        		 arregloreflector[i][j] = 0;
+				}else {
+					arregloreflector[i][j] = 1;
 				}
+	        	 
+	        	 
 	         }
 	     }
-	     
-		    int [] arregloreflectores = new int [listaInteger.size()];
-		    int cantidad = 0;
-		    for (Integer integer : listaInteger) {
-		    		 arregloreflectores[cantidad] = integer;
-		    		 cantidad++;
-
-			}
-	     
-		    System.out.println(Arrays.toString(arregloreflectores));
 	}
 
 	private static boolean isNumeric(String cadena){

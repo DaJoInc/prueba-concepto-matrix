@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class MatrixTester7 {
+public class MatrixTester9 {
+
 	public static void main(String[] args) throws Exception {
 
 
@@ -83,9 +84,7 @@ public class MatrixTester7 {
 	     {
 	         for(int j=0; j<numeroDelArregloCol; j++)
 	         {
-	        	 if (j== i) {
 	        		 listaInteger.add( arregloreflector[i][j]);
-				}
 	         }
 	     }
 	     
